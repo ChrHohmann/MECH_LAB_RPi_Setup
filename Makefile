@@ -1,5 +1,3 @@
-## Makefile
-makefile
 SHELL := /bin/bash
 
 .PHONY: all user venv pkgs activate run
