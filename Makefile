@@ -1,6 +1,3 @@
-
----
-
 ## Makefile
 ```makefile
 SHELL := /bin/bash
