@@ -1,6 +1,6 @@
-!/usr/bin/env bash
+#!/usr/bin/env bash
 set -euo pipefail
-ENV_DIR=${VENV_DIR:-/opt/venv_mech_lab}
+VENV_DIR=${VENV_DIR:-/opt/venv_mech_lab}
 PROFILED_SCRIPT=/etc/profile.d/activate_venv_mech_lab.sh
 
 append_if_missing() { # <file> <marker> <content>
