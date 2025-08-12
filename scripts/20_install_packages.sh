@@ -12,7 +12,7 @@ echo "[1/3] Aktualisiere Pip-Tools"
 
 echo "[2/3] Installiere benötigte Pakete: lgpio und grove.py"
 "${VENV_DIR}/bin/pip" install lgpio
-"${VENV_DIR}/bin/pip" install git+https://github.com/jonasjosi-hslu/grove.py.git@main
+"${VENV_DIR}/bin/pip" install git+https://github.com/jonasjosi-hslu/grove.py.git@master
 
 # (Optional) Weitere nützliche HW-Pakete – bei Bedarf einkommentieren
 # "${VENV_DIR}/bin/pip" install smbus2 gpiozero RPi.GPIO
