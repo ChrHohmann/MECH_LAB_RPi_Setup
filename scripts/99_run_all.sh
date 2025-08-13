@@ -9,5 +9,6 @@ bash scripts/20_install_packages.sh
 bash scripts/25_motd_setup.sh
 bash scripts/30_shell_activation.sh
 bash scripts/35_vnc_config.sh
+bash scripts/40_install_oled_netinfo.sh
 
 echo "[OK] Komplettes Setup abgeschlossen"
