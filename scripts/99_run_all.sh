@@ -2,9 +2,12 @@
 set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-bash "${SCRIPT_DIR}/00_add_user_stud.sh"
-bash "${SCRIPT_DIR}/10_create_global_venv.sh"
-bash "${SCRIPT_DIR}/20_install_packages.sh"
-bash "${SCRIPT_DIR}/30_shell_activation.sh"
+bash scripts/05_system_update.sh
+bash scripts/06_groups_users.sh
+bash scripts/10_create_global_venv.sh
+bash scripts/20_install_packages.sh
+bash scripts/25_motd_setup.sh
+bash scripts/30_shell_activation.sh
+bash scripts/35_vnc_config.sh
 
-echo -e "\n[OK] Komplett-Setup abgeschlossen. Bitte ggf. einmal neu anmelden/neu starten."
+echo "[OK] Komplettes Setup abgeschlossen"

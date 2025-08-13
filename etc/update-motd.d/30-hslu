@@ -1,0 +1,38 @@
+#!/bin/sh
+
+T_RED=91
+T_GRN=92
+T_YLW=93
+T_BLU=94
+T_CYN=96
+
+_LOGO_COL=${T_BLU}
+
+
+colorecho () {
+   echo "\e[$1m$2"
+}
+
+colorecho ${_LOGO_COL} 	"══════════════════════════════════════════════════════════════════════════"
+colorecho ${_LOGO_COL} 	"██╗  ██╗███████╗██╗     ██╗   ██╗"                                
+colorecho ${_LOGO_COL} 	"██║  ██║██╔════╝██║     ██║   ██║"                                 
+colorecho ${_LOGO_COL} 	"███████║███████╗██║     ██║   ██║"                                  
+colorecho ${_LOGO_COL} 	"██╔══██║╚════██║██║     ██║   ██║"                                  
+colorecho ${_LOGO_COL} 	"██║  ██║███████║███████╗╚██████╔╝"                                  
+colorecho ${_LOGO_COL} 	"╚═╝  ╚═╝╚══════╝╚══════╝ ╚═════╝"                                  
+colorecho ${_LOGO_COL} 	""                                                                   
+colorecho ${_LOGO_COL} 	"███╗   ███╗███████╗ ██████╗██╗  ██╗        ██╗      █████╗ ██████╗" 
+colorecho ${_LOGO_COL} 	"████╗ ████║██╔════╝██╔════╝██║  ██║        ██║     ██╔══██╗██╔══██╗"
+colorecho ${_LOGO_COL} 	"██╔████╔██║█████╗  ██║     ███████║        ██║     ███████║██████╔╝"
+colorecho ${_LOGO_COL} 	"██║╚██╔╝██║██╔══╝  ██║     ██╔══██║        ██║     ██╔══██║██╔══██╗"
+colorecho ${_LOGO_COL} 	"██║ ╚═╝ ██║███████╗╚██████╗██║  ██║███████╗███████╗██║  ██║██████╔╝"
+colorecho ${_LOGO_COL} 	"╚═╝     ╚═╝╚══════╝ ╚═════╝╚═╝  ╚═╝╚══════╝╚══════╝╚═╝  ╚═╝╚═════╝ "
+colorecho ${_LOGO_COL} 	"══════════════════════════════════════════════════════════════════════════"
+
+colorecho ${T_RED}	"This Computer is Property of the Lucerne University of Applied Sciences"
+colorecho ${T_RED}	"Any abuse prohibited. All rights reserved."
+colorecho ${T_RED}	"Lucerne, Switzerland ($(date +"%Y"))."
+
+colorecho ${_LOGO_COL} 	"══════════════════════════════════════════════════════════════════════════"
+colorecho ${T_GRN}		"Dear Student, please handle with care"
+colorecho ${_LOGO_COL} 	"══════════════════════════════════════════════════════════════════════════"
