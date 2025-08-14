@@ -6,7 +6,7 @@ REPO_URL=${REPO_URL:-"https://github.com/ChrHohmann/oled_netinfo.git"}
 TARGET_DIR=${TARGET_DIR:-"/opt/oled_netinfo"}
 RUN_USER=${RUN_USER:-"pi"}                 # Dienst läuft unter 'pi'
 PYTHON_BIN=${PYTHON_BIN:-python3}
-LOCAL_VENV_DIR=${LOCAL_VENV_DIR:-"$TARGET_DIR/.venv"}  # Eigene, unabhängige venv
+LOCAL_VENV_DIR=${LOCAL_VENV_DIR:-"$TARGET_DIR/venv"}  # Eigene, unabhängige venv
 
 SYSTEMD_DIR="/etc/systemd/system"
 
