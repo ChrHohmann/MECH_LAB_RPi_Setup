@@ -5,5 +5,5 @@ Dieses Repo richtet auf Raspberry Pi OS eine globale Python‑venv unter `/opt/v
 ## Schnellstart
 ```bash
 sudo apt-get update -y && sudo apt-get install -y git
-git clone https://github.com/ChrHohmann/MECH_LAB_VENV_Setup.git MECH_LAB_VENV_Setup && cd MECH_LAB_VENV_Setup
+git clone https://github.com/ChrHohmann/MECH_LAB_RPi_Setup.git MECH_LAB_RPi_Setup && cd MECH_LAB_RPi_Setup
 sudo make all
