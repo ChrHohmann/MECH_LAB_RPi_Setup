@@ -1,4 +1,4 @@
-# MECH_LAB_VENV_Setup
+# MECH_LAB_RPi_Setup
 
 Dieses Repo richtet auf Raspberry Pi OS eine globale Python‑venv unter `/opt/venv_mech_lab` ein, installiert `lgpio` und `grove.py`, und aktiviert die venv systemweit (Login‑Shells und interaktive Shells).
 
