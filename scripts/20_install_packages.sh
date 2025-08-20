@@ -3,7 +3,7 @@
 # Installiert benötigte Python-Pakete in der globalen venv und prüft sie robust.
 set -euo pipefail
 
-VENV_DIR=${VENV_DIR:-/opt/venv_mech_lab}
+VENV_DIR=${VENV_DIR:-/opt/.venvs/MECH_LAB}
 GROVE_REPO_BRANCH=${GROVE_REPO_BRANCH:-master}   # Branch deines Forks jonasjosi-hslu/grove.py
 
 echo "[PKGS] Verwende venv: $VENV_DIR"

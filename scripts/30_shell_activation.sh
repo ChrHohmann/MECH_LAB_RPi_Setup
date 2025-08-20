@@ -3,7 +3,7 @@
 # Richtet systemweite Auto-Aktivierung der globalen venv ein und ergänzt Benutzer-Shells.
 set -euo pipefail
 
-VENV_DIR=${VENV_DIR:-/opt/venv_mech_lab}
+VENV_DIR=${VENV_DIR:-/opt/.venvs/MECH_LAB}
 PROFILED_SCRIPT="/etc/profile.d/activate_venv_mech_lab.sh"
 
 # Hilfsfunktion: Marker-prüfender Append (ohne Expansion)
@@ -18,7 +18,7 @@ echo "[1/4] Systemweite Aktivierung über /etc/profile.d"
 # Ganz wichtig: gequoteter Heredoc, damit $... NICHT jetzt expandiert, sondern erst zur Laufzeit der Login-Shell.
 cat > "$PROFILED_SCRIPT" <<'EOS'
 # /etc/profile.d/activate_venv_mech_lab.sh
-VENV_DIR=/opt/venv_mech_lab
+VENV_DIR=/opt/.venvs/MECH_LAB
 case $- in
   *i*)
     if [ -z "$VIRTUAL_ENV" ] && [ -f "$VENV_DIR/bin/activate" ]; then
@@ -39,8 +39,8 @@ for home in /root /home/*; do
   BRC="$home/.bashrc"
   append_if_missing "$BRC" "# >>> venv_mech_lab auto-activate >>>" <<'EOBRC'
 # >>> venv_mech_lab auto-activate >>>
-if [ -z "$VIRTUAL_ENV" ] && [ -f /opt/venv_mech_lab/bin/activate ]; then
-  case $- in *i*) . /opt/venv_mech_lab/bin/activate ;; esac
+if [ -z "$VIRTUAL_ENV" ] && [ -f /opt/.venvs/MECH_LAB/bin/activate ]; then
+  case $- in *i*) . /opt/.venvs/MECH_LAB/bin/activate ;; esac
 fi
 # <<< venv_mech_lab auto-activate <<<
 EOBRC
@@ -53,8 +53,8 @@ if [ -f ~/.bashrc ]; then
   . ~/.bashrc
 fi
 # Danach globale venv aktivieren (falls noch keine aktiv ist)
-if [ -z "$VIRTUAL_ENV" ] && [ -f /opt/venv_mech_lab/bin/activate ]; then
-  . /opt/venv_mech_lab/bin/activate
+if [ -z "$VIRTUAL_ENV" ] && [ -f /opt/.venvs/MECH_LAB/bin/activate ]; then
+  . /opt/.venvs/MECH_LAB/bin/activate
 fi
 EOV
 
@@ -66,8 +66,8 @@ echo "[3/4] Vorlagen für künftige Nutzer in /etc/skel"
 # ~/.bashrc Ergänzung in /etc/skel
 append_if_missing /etc/skel/.bashrc "# >>> venv_mech_lab auto-activate >>>" <<'EOSKEL'
 # >>> venv_mech_lab auto-activate >>>
-if [ -z "$VIRTUAL_ENV" ] && [ -f /opt/venv_mech_lab/bin/activate ]; then
-  case $- in *i*) . /opt/venv_mech_lab/bin/activate ;; esac
+if [ -z "$VIRTUAL_ENV" ] && [ -f /opt/.venvs/MECH_LAB/bin/activate ]; then
+  case $- in *i*) . /opt/.venvs/MECH_LAB/bin/activate ;; esac
 fi
 # <<< venv_mech_lab auto-activate <<<
 EOSKEL
@@ -77,8 +77,8 @@ cat > /etc/skel/.bashrc_with_venv <<'EOV'
 if [ -f ~/.bashrc ]; then
   . ~/.bashrc
 fi
-if [ -z "$VIRTUAL_ENV" ] && [ -f /opt/venv_mech_lab/bin/activate ]; then
-  . /opt/venv_mech_lab/bin/activate
+if [ -z "$VIRTUAL_ENV" ] && [ -f /opt/.venvs/MECH_LAB/bin/activate ]; then
+  . /opt/.venvs/MECH_LAB/bin/activate
 fi
 EOV
 chmod 644 /etc/skel/.bashrc_with_venv

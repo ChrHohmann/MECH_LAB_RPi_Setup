@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-VENV_DIR=${VENV_DIR:-/opt/venv_mech_lab}
+VENV_DIR=${VENV_DIR:-/opt/.venvs/MECH_LAB}
 PYTHON_BIN=${PYTHON_BIN:-python3}
 
 echo "[1/5] Installiere Systempakete"
