@@ -1,5 +1,34 @@
 # MECH_LAB_RPi_Setup
 
+## Beschreibung
+Dieses Repo beschreibt den Prozess, mit dem man das Betriebssystem des Raspberry Pis aufsetzt, das im Modul MECH_LAB verwendet wird. In einem ersten Schritt wird daher eine einzelne "Setup SD-Card" erzeugt. In einem zweiten Schritt wird diese SD-Karte für die Nutzung des Raspberry Pi im EEE-Netz der HSLU und im Unterricht entsprechend konfiguriert. 
+
+Neben der Schritt für Schritt Anleitung entält diese Repo Installations-Skripte, die auf Raspberry Pi OS folgende Schritte ausführen:
+- Aktualisierung des Systems
+- Anlegen aller Gruppen und User neben pi
+- richtet eine globale Python‑venv unter `/opt/.venvs/MECH_LAB` ein
+- installiert `lgpio` und `grove.py`
+- installiert die Message of the day (motd) und aktiviert den erforderlichen Service
+- aktiviert die venv systemweit (Login‑Shells und interaktive Shells).
+- konfiguriert die VNC-Verbindung (Achtung alles andere muss manuell über raspi-config gelöst werden)
+- installiert die Software zur Ansteuerung des OLED
+- installiert das Rücksetzen des HOME-Directory des users STUD nach dem Neustart
+
+## Voraussetzungen für die Installation
+- Hardware:
+	- Computer/Mac 
+	- SD-Card Reader
+	- Raspberry Pi
+	- (Micro) SD-Card
+  - Micro HDMI - HDMI Adapter
+  - Mouse and Keyboard
+- Software:
+	- Raspberry Pi Imager (kann von [official Raspberry Pi website](https://www.raspberrypi.com/software/) heruntergeladen werden).
+- Others:
+	- Access to Wifi "hslu" (also possible via vpn)
+	- HSLU User account with access to eee-portal
+Für die 
+
 Dieses Repo führt auf Raspberry Pi OS folgende Schritte aus:
 - Aktualisierung des Systems
 - Anlegen aller Gruppen und User neben pi
