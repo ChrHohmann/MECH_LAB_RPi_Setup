@@ -1,6 +1,15 @@
 # MECH_LAB_RPi_Setup
 
-Dieses Repo richtet auf Raspberry Pi OS eine globale Python‑venv unter `/opt/venv_mech_lab` ein, installiert `lgpio` und `grove.py`, und aktiviert die venv systemweit (Login‑Shells und interaktive Shells).
+Dieses Repo führt auf Raspberry Pi OS folgende Schritte aus:
+- Aktualisierung des Systems
+- Anlegen aller Gruppen und User neben pi
+- richtet eine globale Python‑venv unter `/opt/.venvs/MECH_LAB` ein
+- installiert `lgpio` und `grove.py`
+- installiert die Message of the day (motd) und aktiviert den erforderlichen Service
+- aktiviert die venv systemweit (Login‑Shells und interaktive Shells).
+- konfiguriert die VNC-Verbindung (Achtung alles andere muss manuell über raspi-config gelöst werden)
+- installiert die Software zur Ansteuerung des OLED
+- installiert das Rücksetzen des HOME-Directory des users STUD nach dem Neustart
 
 ## Schnellstart
 ```bash
