@@ -12,6 +12,7 @@ run:
 	sudo bash scripts/30_shell_activation.sh
 	sudo bash scripts/35_vnc_config.sh
 	sudo bash scripts/40_install_oled_netinfo.sh
+	sudo bash scripts/45_mech_lab_reset_home_dir.sh
 
 update:
 	sudo bash scripts/05_system_update.sh
@@ -36,3 +37,6 @@ vnc:
 
 oled:
 	sudo bash scripts/40_install_oled_netinfo.sh
+
+reset-home:
+	sudo bash scripts/45_mech_lab_reset_home_dir.sh
